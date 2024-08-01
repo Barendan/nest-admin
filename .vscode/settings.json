@@ -1,0 +1,19 @@
+{
+  "CodeGPT.apiKey": "CodeGPT Plus Beta",
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 33066,
+      "driver": "MySQL",
+      "name": "nest-admin",
+      "username": "root",
+      "database": "admin",
+      "password": "root"
+    }
+  ]
+}
