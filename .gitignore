@@ -1,2 +1,2 @@
-/node_modules
-/.dbdata
+/node_modules/
+.dbdata/
