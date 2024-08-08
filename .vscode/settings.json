@@ -15,5 +15,6 @@
       "database": "admin",
       "password": "root"
     }
-  ]
+  ],
+  "js/ts.implicitProjectConfig.checkJs": true
 }
