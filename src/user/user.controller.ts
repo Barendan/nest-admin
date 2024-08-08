@@ -12,7 +12,7 @@ export class UserController {
 
   @Get()
   async all(): Promise<User[]> {
-    return await this.userService.all();
+    return this.userService.all();
   }
 
 
