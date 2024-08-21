@@ -1,4 +1,4 @@
-import { Body, ClassSerializerInterceptor, Controller, Get, Post, UseInterceptors, UseGuards, Param, Put, Delete } from '@nestjs/common';
+import { Body, ClassSerializerInterceptor, Controller, Get, Post, UseInterceptors, UseGuards, Param, Put, Delete, Query } from '@nestjs/common';
 import { UserService } from './user.service';
 import { User } from './models/user.entity';
 import * as bcrypt from 'bcryptjs';
@@ -17,8 +17,8 @@ export class UserController {
   }
 
   @Get()
-  async all(): Promise<User[]> {
-    return this.userService.all();
+  async all(@Query('page') page = 1): Promise<any> {
+    return this.userService.paginate(page);
   }
   
   @Post()

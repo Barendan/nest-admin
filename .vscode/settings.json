@@ -16,5 +16,6 @@
       "password": "root"
     }
   ],
-  "js/ts.implicitProjectConfig.checkJs": true
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "sqltools.connectionExplorer.groupConnected": true
 }
