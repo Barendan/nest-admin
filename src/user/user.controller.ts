@@ -17,8 +17,8 @@ export class UserController {
   }
 
   @Get()
-  async all(@Query('page') page = 1): Promise<any> {
-    return this.userService.paginate(page);
+  async all(@Query('page') page = 1) {
+    return this.userService.paginate(page, ['role']);
   }
   
   @Post()
@@ -37,7 +37,7 @@ export class UserController {
 
   @Get(':id')
   async get(@Param('id') id: number) { 
-    return this.userService.findOne({id});
+    return this.userService.findOne({id}, ['role']);
 
   }
 
@@ -52,8 +52,8 @@ export class UserController {
       ...data,
       role: {id: role_id}
     })
-  
-    return this.userService.findOne({id})
+
+    return await this.userService.findOne({id}, ['role'])
   }
 
   @Delete(':id')
